@@ -44,7 +44,6 @@ Ordenador obligatorio
 
 .. revealjs-section::
     :data-background-color: #000000
-    :data-background-image: _static/computer_required.jpg
 
 .. revealjs-notes::
 
@@ -58,20 +57,6 @@ Conexión WiFI
 
 .. revealjs-section::
     :data-background-color: #000000
-    :data-background-image: _static/wifi.jpg
-
-.. revealjs-notes::
-
-   Vamos a lo primero, la conexión WiFi. Esperemos que vaya bien la red de la organización...
-
-
-
-Conexión WiFI
-=============
-
-.. revealjs-section::
-    :data-background-color: #000000
-    :data-background-image: _static/wifi.jpg
 
 .. revealjs-notes::
 
@@ -103,7 +88,6 @@ Kits de componentes
 
 .. revealjs-section::
     :data-background-color: #000000
-    :data-background-image: _static/components_kits.jpg
 
 .. revealjs-notes::
 
@@ -119,7 +103,6 @@ Simulador online
 
 .. revealjs-section::
     :data-background-color: #000000
-    :data-background-image: _static/online_simulator.jpg
 
 .. revealjs-notes::
 
