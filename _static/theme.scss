@@ -393,7 +393,7 @@ section[data-background-color="#DDDDDD"] {
 }
 
 /* Title with shadow */
-#microcontroladores, #esp32, #demos, #encender-un-led, #i2c {
+#sin-conocimientos-previos, #microcontroladores, #esp32, #demos, #encender-un-led, #i2c {
   h2, h3, h4 {
     text-shadow: #000000 1px 0 10px;
   }
@@ -425,6 +425,27 @@ $blackComplementary: #FFD538;
     padding-left: 20px;
     padding-right: 20px;
     color: #ffffff;
+  }
+}
+
+#sin-conocimientos-previos {
+  h2 {
+    font-size: 3.5em;
+    text-shadow: #000000 0 0 30px;
+  }
+}
+
+#ordenador-obligatorio {
+  h2 {
+    font-size: 4.3em;
+    text-shadow: #000000 0 0 30px;
+  }
+}
+
+#simulador-online {
+  h2 {
+    font-size: 3.0em;
+    text-shadow: #000000 0 0 30px;
   }
 }
 

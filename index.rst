@@ -24,8 +24,8 @@
 
 
 
-Sin conocimientos previos
-=========================
+Sin **conocimientos** previos
+=============================
 
 .. revealjs-section::
     :data-background-color: #000000
@@ -39,11 +39,14 @@ Sin conocimientos previos
 
 
 
-Ordenador obligatorio
-=====================
+Ordenador **obligatorio**
+=========================
 
 .. revealjs-section::
-    :data-background-color: #000000
+    :data-background-color: #333333
+    :data-background-video: _static/laptop.mp4
+    :data-background-video-loop: true
+    :data-background-size: cover
 
 .. revealjs-notes::
 
@@ -52,11 +55,13 @@ Ordenador obligatorio
 
 
 
-Conexión WiFI
-=============
+Conexión **WiFI**
+=================
 
 .. revealjs-section::
     :data-background-color: #000000
+    :data-background-image: _static/wireless_background.png
+    :data-background-size: cover
 
 .. revealjs-notes::
 
@@ -98,11 +103,14 @@ Kits de componentes
 
 
 
-Simulador online
-=================
+Simulador **online**
+====================
 
 .. revealjs-section::
-    :data-background-color: #000000
+    :data-background-color: #333333
+    :data-background-video: _static/wokwi.mp4
+    :data-background-video-loop: true
+    :data-background-size: cover
 
 .. revealjs-notes::
 
@@ -117,6 +125,12 @@ Hello world
 
 .. revealjs-section::
     :data-background-color: #090a0f
+
+.. micropython-demo::
+    :video: _static/demo0.mp4
+
+    print(" ".join(["hello", "world"]))
+
 
 .. revealjs-notes::
 
@@ -787,9 +801,10 @@ Conectar un **led WS2812**
    Vamos a empezar con el protocolo WS2812, o APA106, que es el que utilizan los LEDs RGB de tipo NeoPixel. Este
    protocolo unidireccional sólo necesita un pin de datos, pudiendo conectar varios LEDs a la vez, cada uno con su
    color. En la imagen tenéis un LED de tipo Neopixel, no lo confundáis con el anterior. Cada patilla tiene su longitud.
-   El pin más largo es tierra, el que está a su lado izquierdo es el de 5V, el más corto es el de datos, y el que está
-   a su lado derecho es la salida, que nos permitirá conectar más LEDs en cadena. Cuando hagáis el circuito, no
-   conectéis el pin de 5V hasta que estéis seguros de que todo está bien. Ahora, os dejo con el ejercicio.
+   El pin más largo es 5V, el que está a su lado izquierdo es el de tierra, el más corto es el de datos, y el que está
+   al otro lado es la salida, que nos permitirá conectar más LEDs en cadena. Cuando hagáis el circuito, no
+   conectéis el pin de 5V hasta que estéis seguros de que todo está bien, y fijaros bien en los pines, o quemaréis el
+   LED. Ahora, os dejo con el ejercicio.
 
 
 
