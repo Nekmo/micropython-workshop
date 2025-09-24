@@ -393,9 +393,27 @@ section[data-background-color="#DDDDDD"] {
 }
 
 /* Title with shadow */
-#sin-conocimientos-previos, #microcontroladores, #esp32, #demos, #encender-un-led, #i2c {
+#sin-conocimientos-previos, #microcontroladores, #esp32, #nos-recolocamos, #demos, #encender-un-led, #i2c {
   h2, h3, h4 {
     text-shadow: #000000 1px 0 10px;
+  }
+}
+
+#conectar-el-led, #led-analogico, #conectar-un-boton, #conectar-un-led-rgb, #conectar-un-led-ws2812,
+#conectar-sensor-y-pantalla-i2c {
+  ul {
+    display: block;
+    text-align: center;
+
+     li {
+       display: inline-block;
+       margin-left: 10px;
+       margin-right: 10px;
+
+       a {
+         color: #8b8b8b;
+       }
+     }
   }
 }
 
@@ -503,6 +521,42 @@ $blackComplementary: #FFD538;
   h1, h2, h3, h4 {
     font-size: 6em;
     text-shadow: #000000 20px 0 20px;
+  }
+}
+
+#por-que-micropython {
+  h1, h2, h3, h4 {
+    font-size: 2.2em;
+  }
+}
+
+#primeros-pasos {
+  h1, h2, h3, h4 {
+    font-size: 3.0em;
+  }
+
+  ul {
+    font-size: 1.3em;
+  }
+}
+
+#protoboard {
+  h1, h2, h3, h4 {
+    font-size: 2.5em;
+  }
+
+  img {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.55);
+  }
+}
+
+#avisos-de-seguridad {
+  h1, h2, h3, h4 {
+    font-size: 2.5em;
+  }
+
+  ul {
+    font-size: 1.2em;
   }
 }
 

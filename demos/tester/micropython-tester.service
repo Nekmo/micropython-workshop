@@ -1,0 +1,14 @@
+[Unit]
+Description=Micropython Tester Script
+After=basic.target
+
+[Service]
+ExecStart=/home/pi/esptool-env/bin/python /home/pi/tester/main.py
+WorkingDirectory=/home/pi/tester
+Restart=always
+User=root
+Environment=PATH=/home/pi/esptool-env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=VIRTUAL_ENV=/home/pi/esptool-env
+
+[Install]
+WantedBy=multi-user.target

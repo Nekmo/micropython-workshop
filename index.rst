@@ -120,8 +120,8 @@ Simulador **online**
 
 
 
-Hello world
-===========
+**Hello** world
+===============
 
 .. revealjs-section::
     :data-background-color: #090a0f
@@ -138,16 +138,16 @@ Hello world
    el dispositivo, el cual suele ser algo así como USB JTAG y en el botón de ejecutar.
 
 
-Posibles problemas
-------------------
+Posibles **problemas**
+----------------------
 
 .. revealjs-section::
     :data-background-color: #090a0f
 
 .. revealjs-fragments::
 
-    * **GNU/Linux**. No está en el grupo dialout o no están las reglas de udev (ver solución).
-    * **Windows y Mac**. No están los drivers instalados (ver solución).
+    * 🐧 **GNU/Linux**. No está en el grupo dialout o no están las reglas de udev `(ver solución) <https://github.com/Nekmo/micropython-workshop/blob/master/demos/demo0/TROUBLESHOOTING.rst#gnulinux>`_.
+    * 🪟 **Windows y Mac**. No están los drivers instalados `(ver solución) <https://github.com/Nekmo/micropython-workshop/blob/master/demos/demo0/TROUBLESHOOTING.rst#windows>`_.
 
 .. revealjs-notes::
 
@@ -181,8 +181,8 @@ Sobre mí **Nekmo**
    como Nekmo, y puede que me conozcáis por charlas anteriores tanto aquí como en Python Málaga.
 
 
-Otras charlas...
-================
+Otras **charlas**...
+====================
 
 .. image:: images/talks1.jpg
    :width: 32%
@@ -407,8 +407,8 @@ Micropython
 
 
 
-¿Por qué Micropython?
----------------------
+¿Por qué **Micropython**?
+-------------------------
 
 .. revealjs-section::
     :data-background-color: #090a0f
@@ -434,8 +434,8 @@ Micropython
 
 
 
-Nos recolocamos
-===============
+Nos **recolocamos**
+===================
 
 .. revealjs-section::
     :data-background-color: #000000
@@ -450,14 +450,17 @@ Nos recolocamos
 
 
 
-Lo básico de electrónica
-========================
+Lo básico de **electrónica**
+============================
+
+.. revealjs-section::
+    :data-background-color: #090a0f
 
 .. revealjs-fragments::
 
-    * La mayoría de los componentes son **polarizados**.
-    * Todos los componentes deben ir a **tierra** (cable *negro*).
-    * Usar **resistencias** con los *LED*.
+    * ⚡ La mayoría de los componentes son **polarizados**.
+    * 🌍 Todos los componentes deben ir a **tierra** (cable *negro*).
+    * 💡 Usar **resistencias** con los *LED*.
 
 .. revealjs-notes::
 
@@ -466,7 +469,11 @@ Lo básico de electrónica
 Protoboard
 ----------
 
-# TODO: protoboard image
+.. revealjs-section::
+   :data-background-color: #DDDDDD
+
+.. image:: images/protoboard.png
+    :width: 60%
 
 .. revealjs-notes::
 
@@ -475,14 +482,17 @@ Protoboard
    prácticas), también están conectadas entre sí. Aprovecharemos esto para hacer uniones entre cables y
    componentes.
 
-Avisos de seguridad
--------------------
+Avisos de **seguridad**
+-----------------------
+
+.. revealjs-section::
+    :data-background-color: #090a0f
 
 .. revealjs-fragments::
 
-   * **NUNCA cortocircuitar** pines.
-   * **CUIDADO** con el **pin de 5V**.
-   * **Fijarse** bien antes de conectar cables y componentes.
+   * 🚫 **NUNCA cortocircuitar** pines.
+   * ⚠️ **CUIDADO** con el **pin de 5V**.
+   * 👁️ **Fijarse** bien antes de conectar cables y componentes.
 
 .. revealjs-notes::
 
@@ -540,8 +550,14 @@ Identificar **los pines**
 .. revealjs-section::
    :data-background-color: #DDDDDD
 
-* `Ejercicio sin resolver <https://wokwi.com/projects/441387172284308481>`_
-* `Ejercicio resuelto <https://wokwi.com/projects/441386639666392065>`_
+.. image:: images/resistor.png
+   :width: 30%
+
+.. image:: images/led.png
+   :width: 20%
+
+* `✏️ Ejercicio sin resolver <https://wokwi.com/projects/441387172284308481>`_
+* `✅ Ejercicio resuelto <https://wokwi.com/projects/441386639666392065>`_
 
 .. revealjs-notes::
 
@@ -579,8 +595,14 @@ LED **analógico**
 .. revealjs-section::
    :data-background-color: #DDDDDD
 
-* `Ejercicio sin resolver <https://wokwi.com/projects/441387365772801025>`_
-* `Ejercicio resuelto <https://wokwi.com/projects/440571798883168257>`_
+.. video:: _static/led_breathing.mkv
+   :width: 60%
+   :autoplay:
+   :loop:
+   :muted:
+
+* `✏️ Ejercicio sin resolver <https://wokwi.com/projects/441387365772801025>`_
+* `✅ Ejercicio resuelto <https://wokwi.com/projects/440571798883168257>`_
 
 .. revealjs-notes::
 
@@ -638,6 +660,8 @@ Conectar **un botón**
 .. revealjs-section::
    :data-background-color: #DDDDDD
 
+.. image:: images/switch.png
+   :width: 30%
 
 * `Ejercicio sin resolver <https://wokwi.com/projects/441388877026727937>`_
 * `Ejercicio resuelto <https://wokwi.com/projects/440572379251171329>`_
@@ -696,6 +720,11 @@ Conectar un **LED RGB**
 .. revealjs-section::
    :data-background-color: #DDDDDD
 
+.. image:: images/resistor.png
+   :width: 30%
+
+.. image:: images/rgb_led.png
+   :width: 14%
 
 * `Ejercicio sin resolver <https://wokwi.com/projects/441390660052679681>`_
 * `Ejercicio resuelto <https://wokwi.com/projects/440573050467784705>`_
@@ -792,6 +821,12 @@ Conectar un **led WS2812**
 .. revealjs-section::
    :data-background-color: #DDDDDD
 
+.. image:: images/resistor.png
+   :width: 25%
+
+.. image:: images/apa106.png
+   :width: 10%
+
 * `Ejercicio sin resolver <https://wokwi.com/projects/441391974099865601>`_
 * `Ejercicio resuelto <https://wokwi.com/projects/440574036913642497>`_
 
@@ -866,6 +901,12 @@ Conectar **sensor** y **pantalla I2C**
 
 .. revealjs-section::
    :data-background-color: #DDDDDD
+
+.. image:: images/sht41.png
+   :width: 26%
+
+.. image:: images/ssd1306.png
+   :width: 30%
 
 * `Ejercicio sin resolver <https://wokwi.com/projects/441394565508740097>`_
 * `Ejercicio resuelto <https://wokwi.com/projects/441393628155164673>`_
