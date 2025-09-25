@@ -1136,8 +1136,8 @@ ESP-Now
 =======
 
 .. revealjs-section::
-    :data-background-color: #090a0f
-
+    :data-background-image: _static/wireless_background.png
+    :data-background-size: cover
 
 .. revealjs-notes::
 
