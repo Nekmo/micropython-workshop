@@ -97,6 +97,9 @@ recomienda ejecutar los siguientes pasos en un
 
 Tras la compilación puede verse los ficheros resultantes en el directorio ``_build``.
 
+Conferencia
+===========
+Existe una versión previa de este taller en formato conferencia, de 45 minutos de duración, que puede verse en `github.com/Nekmo/micropython-presentacion <https://github.com/Nekmo/micropython-presentacion>`_.
 
 Copyright
 =========
