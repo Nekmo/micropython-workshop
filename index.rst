@@ -663,8 +663,8 @@ Conectar **un botón**
 .. image:: images/switch.png
    :width: 30%
 
-* `Ejercicio sin resolver <https://wokwi.com/projects/441388877026727937>`_
-* `Ejercicio resuelto <https://wokwi.com/projects/440572379251171329>`_
+* `✏️ Ejercicio sin resolver <https://wokwi.com/projects/441388877026727937>`_
+* `✅ Ejercicio resuelto <https://wokwi.com/projects/440572379251171329>`_
 
 
 .. revealjs-notes::
@@ -726,8 +726,8 @@ Conectar un **LED RGB**
 .. image:: images/rgb_led.png
    :width: 14%
 
-* `Ejercicio sin resolver <https://wokwi.com/projects/441390660052679681>`_
-* `Ejercicio resuelto <https://wokwi.com/projects/440573050467784705>`_
+* `✏️ Ejercicio sin resolver <https://wokwi.com/projects/441390660052679681>`_
+* `✅ Ejercicio resuelto <https://wokwi.com/projects/440573050467784705>`_
 
 
 .. revealjs-notes::
@@ -827,8 +827,8 @@ Conectar un **led WS2812**
 .. image:: images/apa106.png
    :width: 10%
 
-* `Ejercicio sin resolver <https://wokwi.com/projects/441391974099865601>`_
-* `Ejercicio resuelto <https://wokwi.com/projects/440574036913642497>`_
+* `✏️ Ejercicio sin resolver <https://wokwi.com/projects/441391974099865601>`_
+* `✅ Ejercicio resuelto <https://wokwi.com/projects/440574036913642497>`_
 
 
 .. revealjs-notes::
@@ -908,8 +908,8 @@ Conectar **sensor** y **pantalla I2C**
 .. image:: images/ssd1306.png
    :width: 30%
 
-* `Ejercicio sin resolver <https://wokwi.com/projects/441394565508740097>`_
-* `Ejercicio resuelto <https://wokwi.com/projects/441393628155164673>`_
+* `✏️ Ejercicio sin resolver <https://wokwi.com/projects/441394565508740097>`_
+* `✅ Ejercicio resuelto <https://wokwi.com/projects/441393628155164673>`_
 
 .. revealjs-notes::
 
