@@ -34,3 +34,8 @@ Instalación
   y selecciona el puerto serie asociado a tu microcontrolador.
 
 En caso de problemas, consulta el archivo `TROUBLESHOOTING.rst <https://github.com/Nekmo/micropython-workshop/blob/master/demos/demo0/TROUBLESHOOTING.rst>`_ en este mismo directorio.
+
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo0.mp4

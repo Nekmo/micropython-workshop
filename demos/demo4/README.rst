@@ -31,6 +31,11 @@ Instalación
   a tierra (GND). El pin que está solo, al lado del más largo (tierra), es el correspondiente al color rojo. Los dos
   restantes son los colores verde y azul, siendo el más lejano el azul y el más cercano al rojo el verde.
 
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo4.mp4
+
 Simulación
 ==========
 

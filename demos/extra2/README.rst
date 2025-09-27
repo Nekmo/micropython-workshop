@@ -32,6 +32,11 @@ Instalación
 - Conecta el pin 2 del microcontrolador al pin VRy del joystick (eje Y).
 - Conecta el pin 3 del microcontrolador al pin SW del joystick (pulsador).
 
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/demos/extra1/extra1.mp4
+
 Simulación
 ==========
 

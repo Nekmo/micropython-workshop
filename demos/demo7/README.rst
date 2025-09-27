@@ -14,3 +14,8 @@ Componentes
 
 - Coche RoverC Pro de M5Stack.
 - M5StickC PLUS 2.
+
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo7.mp4

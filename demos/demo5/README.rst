@@ -40,6 +40,11 @@ Instalación
 - Conecta el pin de alimentación (VCC) de los LEDs APA106 (WS2812B) al voltaje de 5V y el pin de tierra (GND) a tierra
   (GND) de tu microcontrolador.
 
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo5.mp4
+
 Simulación
 ==========
 

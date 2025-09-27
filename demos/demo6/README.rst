@@ -45,6 +45,10 @@ Instalación
   SHT41 a la pantalla OLED SSD1306, ya que ambas utilizan el mismo bus I2C. Haz lo propio con los pines de alimentación
   y tierra.
 
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo6.mp4
 
 Simulación
 ==========

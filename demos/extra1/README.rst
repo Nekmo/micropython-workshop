@@ -37,6 +37,12 @@ Instalación
 - Conectar otro GPIO (en este ejemplo, el pin 2) al ánodo del LED (la pata más larga) y el cátodo (la pata más corta)
   a tierra (GND), empleando una resistencia de 330 ohmios en serie para limitar la corriente.
 
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/demos/extra1/extra1.mp4
+
+
 Simulación
 ==========
 

@@ -25,6 +25,11 @@ Instalación
 - Emplea una resistencia de 330 ohmios en serie con el LED para limitar la corriente, si dispones de una.
 - Conecta el ánodo del LED (la pata más larga) al PIN seleccionado y el cátodo (la pata más corta) a tierra (GND).
 
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo1.mp4
+
 Simulación
 ==========
 

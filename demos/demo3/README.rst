@@ -28,6 +28,11 @@ Instalación
 - Conecta un terminal del botón al PIN seleccionado y el otro terminal a tierra (GND). No es necesario añadir una
   resistencia, ya que el microcontrolador cuenta con una resistencia pull-up interna.
 
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo3.mp4
+
 Simulación
 ==========
 

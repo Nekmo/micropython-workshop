@@ -19,7 +19,6 @@ El servidor inicia una red WiFi con el patrón morse-xxxx, conectándose el clie
 mayor intensidad de señal. En caso de conflicto, por haber varias personas realizando esta práctica, se puede
 modificar el patrón.
 
-
 Componentes
 ===========
 
@@ -62,6 +61,11 @@ Servidor:
 - Conecta dicho pin a la resistencia de 330 ohmios, y el otro extremo de la resistencia al ánodo del LED (la pata más
   larga).
 - Conecta el cátodo del LED (la pata más corta) a tierra (GND).
+
+Vídeo
+=====
+
+https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/demos/extra1/extra3.mp4
 
 Simulación
 ==========
