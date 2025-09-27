@@ -44,3 +44,7 @@ Simulación
 ==========
 
 https://wokwi.com/projects/431056405050983425
+
+El componente WS2812B de Wokwi corresponde a los LEDs APA106 usados durante el taller, pero al no tener el mismo
+formato, no se ha podido incluir en el esquema de la simulación. Puedes ver una imagen del montaje en esta misma
+carpeta, o el vídeo de las diapositivas como referencia.
