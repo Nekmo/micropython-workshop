@@ -35,7 +35,7 @@ Sin **conocimientos** previos
 
    Este es un taller de microcontroladores con Micropython, el cual no requiere de conocimientos previos ni de
    Micropython, ni de microcontroladores ni de electrónica. Iremos desde el principio, pero estoy seguro que quienes
-   tengáis ya experiencia, también aprendáis algo nuevo.
+   tengáis ya experiencia, también aprenderéis algo nuevo.
 
 
 
@@ -114,9 +114,9 @@ Simulador **online**
 
 .. revealjs-notes::
 
-   Los que no tengáis kit, no os preocupéis, que también usaremos un simulador online. También podréis viendo ayudando
-   a quienes tengan kit, luego os pediré que os cambiéis de sitio para ver las prácticas, cuando ya estén repartidos
-   los kits de forma definitiva.
+   Los que no tengáis kit, no os preocupéis, que también usaremos un simulador online. Podréis ayudar a quienes tengan
+   kit, en equipos. Luego os pediré que os cambiéis de sitio para ver las prácticas. Esto lo haremos cuando lo kits
+   estén repartidos de forma definitiva.
 
 
 
@@ -207,7 +207,7 @@ Otras **charlas**...
 
 .. revealjs-notes::
 
-   Si venís de Málaga, os recomiendo echarle un ojo a nuestra asociación, donde hacemos charlas tan chulas como la
+   Si venís de Málaga, os recomiendo echarle un ojo a nuestra comunidad, donde hacemos charlas tan chulas como la
    que veis en las fotos. Hemos hecho concursos, networking, y mucho más. Las imágenes son de un evento del año
    pasado en las oficinas para las que trabajo, en Plytix. *Permitidme preguntar, ¿cuántos tenéis ya funcionando
    el kit?*
@@ -464,7 +464,7 @@ Lo básico de **electrónica**
 
 .. revealjs-notes::
 
-   Y mientras termináis de asentaros, vamos a reparas algunas cosas básicas de electrónica. Recordar: [...]
+   Y mientras termináis de asentaros, vamos a repasar algunas cosas básicas de electrónica. Recordar: [...]
 
 Protoboard
 ----------
@@ -914,7 +914,7 @@ Conectar **sensor** y **pantalla I2C**
 .. revealjs-notes::
 
    Para esta pŕactica, vamos a conectar tanto la pantalla como un sensor de temperatura a un mismo I2C, el cual utiliza
-   2 pines, SDA y SCL. Necesitaremos además una tierra y una alimentación. Cada dispositivo I2C tiene una dirección
+   2 pines, SCL y SDA. Necesitaremos además una tierra y una alimentación. Cada dispositivo I2C tiene una dirección
    única, la cual debemos conocer para comunicarnos con él. No obstante, podemos utilizar el escáner I2C para conocer
    la dirección de nuestros dispositivos. En este caso, la pantalla es una OLED de 128x64 píxeles, y el sensor un SHT41
    para medir la temperatura y humedad. No necesitaremos resistencias, y qué es cada pin está indicado en el componente.
@@ -1168,8 +1168,9 @@ Demo **dron**
 
 .. revealjs-notes::
 
-    Y mientras os dejo jugando con el coche... ¡Hasta aquí la presentación! Espero que hayáis disfrutado y aprendido
-    algo nuevo. Sé que he ido muy rápido, pero si tenéis dudas, estoy disponible para resolverlas.
+    Y mientras os dejo jugando con el coche... ¡Hasta aquí el taller! Espero que hayáis disfrutado y aprendido
+    algo nuevo. Sé que no hemos tenido mucho tiempo para verlo todo, pero si tenéis dudas, estoy disponible para
+    resolverlas.
 
 
 
@@ -1209,8 +1210,8 @@ Python **Málaga**
 
 .. revealjs-notes::
 
-   Y para más presentaciones, apuntaros a la comunidad de Python Málaga, donde hacemos más charlas como esta. No
-   olvidéis seguirnos en nuestras redes sociales, y en nuestro grupo de Telegram.
+   Y para más presentaciones y talleres, apuntaros a la comunidad de Python Málaga, donde hacemos más eventos como este.
+   No olvidéis seguirnos en nuestras redes sociales, y en nuestro grupo de Telegram.
 
 
 
