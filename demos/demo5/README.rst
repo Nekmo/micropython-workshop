@@ -30,8 +30,8 @@ Instalación
   dispones de una.
 - Identifica cada uno de los pines de los LEDs APA106 (WS2812B):
   - El pin más corto es el de entrada de datos (Data In).
-  - El pin más largo es el de tierra (GND).
-  - El pin que está entre la entrada de datos y tierra es el de alimentación (VCC).
+  - El pin más largo es el de 5V (VCC).
+  - El pin que está entre la entrada de datos y 5V es el tierra (GND).
   - El pin restante es el de salida de datos (Data Out), que se conecta al siguiente LED APA106 (WS2812B) si hay más,
     a la entrada de datos del siguiente LED.
 - Conecta el pin de entrada de datos del primer LED APA106 (WS2812B) al PIN seleccionado en tu microcontrolador.
