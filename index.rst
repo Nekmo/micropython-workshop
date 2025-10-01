@@ -93,6 +93,7 @@ Kits de componentes
 
 .. revealjs-section::
     :data-background-color: #000000
+    :data-background-image: _static/components_kits.jpg
 
 .. revealjs-notes::
 
