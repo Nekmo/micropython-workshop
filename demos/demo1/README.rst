@@ -33,4 +33,5 @@ https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo
 Simulación
 ==========
 
-https://wokwi.com/projects/430962530153768961
+Ejercicio: https://wokwi.com/projects/441387172284308481
+Resuelto: https://wokwi.com/projects/430962530153768961
