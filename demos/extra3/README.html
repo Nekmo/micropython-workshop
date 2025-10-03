@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Extra 3</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="../../_static/revealjs/dist/theme/.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=6d7ffba9" />
+    <script src="../../_static/main.js?v=99295717"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section  id="extra-3">
+<h1>Extra 3</h1>
+<p>Esta es una demostración adicional. No pertenece a la serie de demos numeradas del taller, por lo que no se muestra en
+la presentación.</p>
+<p>Para esta práctica, se requieren dos microcontroladores, uno actuando como Access Point (servidor) y otro como cliente.
+Dos personas pueden colaborar para realizar esta práctica, cada una con un microcontrolador.</p>
+<p>El objetivo de esta práctica es comprender cómo se realiza la comunicación WiFi con Micropython, haciendo uno de
+Access Point (servidor) y otro como cliente WiFi. Durante este ejercicio, se creará un telégrafo o timbre inalámbrico.</p>
+<ul class="simple">
+<li><p>El cliente dispone de un botón y un LED, encendiéndose éste y mandando la señal al servidor indicando que se ha
+pulsado el botón.</p></li>
+<li><p>Cuando recibe la orden, el servidor emite un pitido por el altavoz, y cuando deja de pulsarse, el pitido cesa. El
+servidor cuenta igualmente con un LED.</p></li>
+</ul>
+<p>El servidor inicia una red WiFi con el patrón morse-xxxx, conectándose el cliente a la red con dicho patrón que tenga
+mayor intensidad de señal. En caso de conflicto, por haber varias personas realizando esta práctica, se puede
+modificar el patrón.</p>
+</section>
+</section>
+<section >
+<section  id="componentes">
+<h2>Componentes</h2>
+<p>Cliente:</p>
+<ul class="simple">
+<li><p>Microcontrolador compatible con Micropython, como ESP32 o Raspberry Pi Pico.</p></li>
+<li><p>Botón.</p></li>
+<li><p>Resistencia de 330 ohmios, utilizada por el LED.</p></li>
+<li><p>Diodo LED.</p></li>
+</ul>
+<p>Servidor:</p>
+<ul class="simple">
+<li><p>Microcontrolador compatible con Micropython, como ESP32 o Raspberry Pi Pico.</p></li>
+<li><p>Zumbador (buzzer) pasivo de PC.</p></li>
+<li><p>Resistencia de 330 ohmios, utilizada por el LED.</p></li>
+<li><p>Diodo LED.</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section  id="instalacion">
+<h2>Instalación</h2>
+<p>Cliente:</p>
+<ul class="simple">
+<li><p>Identifica el número de PIN al que vas a conectar el botón en tu microcontrolador, usando el esquema proporcionado por
+el fabricante. En este ejemplo, se utiliza el pin 1.</p></li>
+<li><p>Conecta dicho pin a un extremo del botón.</p></li>
+<li><p>Conecta el otro extremo del botón a tierra (GND).</p></li>
+<li><p>Identifica el pin GPIO que vas a utilizar para el LED (en este ejemplo, el pin 2).</p></li>
+<li><p>Conecta dicho pin a la resistencia de 330 ohmios, y el otro extremo de la resistencia al ánodo del LED (la pata más
+larga).</p></li>
+<li><p>Conecta el cátodo del LED (la pata más corta) a tierra (GND).</p></li>
+</ul>
+<p>Servidor:</p>
+<ul class="simple">
+<li><p>Identifica el número de PIN al que vas a conectar el zumbador (buzzer) en tu microcontrolador, usando el esquema
+proporcionado por el fabricante. En este ejemplo, se utiliza el pin 1.</p></li>
+<li><p>Conecta dicho pin al zumbador (buzzer) pasivo al cable rojo del zumbador. Puedes meter la punta del cable en el agujero
+del zumbador.</p></li>
+<li><p>Conecta el otro cable del zumbador, de color negro, a tierra (GND).</p></li>
+<li><p>Identifica el pin GPIO que vas a utilizar para el LED (en este ejemplo, el pin 2).</p></li>
+<li><p>Conecta dicho pin a la resistencia de 330 ohmios, y el otro extremo de la resistencia al ánodo del LED (la pata más
+larga).</p></li>
+<li><p>Conecta el cátodo del LED (la pata más corta) a tierra (GND).</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section  id="video">
+<h2>Vídeo</h2>
+<p><a class="reference external" href="https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/demos/extra1/extra3.mp4">https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/demos/extra1/extra3.mp4</a></p>
+</section>
+</section>
+<section >
+<section  id="simulacion">
+<h2>Simulación</h2>
+<p>Cliente: <a class="reference external" href="https://wokwi.com/projects/443269656217675777">https://wokwi.com/projects/443269656217675777</a>
+Servidor: <a class="reference external" href="https://wokwi.com/projects/443271164169707521">https://wokwi.com/projects/443271164169707521</a></p>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="../../_static/revealjs/dist/reveal.js"></script>
+    
+    
+      <script src="../../_static/revealjs/plugin/notes/notes.js"></script>
+      <script src="../../_static/revealjs/plugin/highlight/highlight.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"controls": true, "progress": true, "history": true, "center": true, "margin": 0.2, "transition": "slide", "scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealNotes,RevealHighlight,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>

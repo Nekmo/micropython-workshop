@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Taller de Micropython</title>
+    <link rel="stylesheet" type="text/css" href="_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="_static/revealjs/dist/theme/.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css?v=6d7ffba9" />
+    <script src="_static/main.js?v=99295717"></script>
+    <link rel="next" title="Micropython: programación fácil y para todos de microcontroladores" href="README.html" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <div class="toctree-wrapper compound">
+</div>
+<section >
+<section data-background-color="#36760d" data-transition-speed="slow" data-transition="fade" id="intro">
+<h1><em>Taller de</em> Micropython</h1>
+<p><strong>Programación fácil y para todos de microcontroladores</strong></p>
+<aside class="notes">Hola a todos, muchas gracias por venir.</aside></section>
+</section>
+<section >
+<section data-background-color="#000000" data-background-image="_images/electronic_classroom.jpg" id="sin-conocimientos-previos">
+<h2>Sin <strong>conocimientos</strong> previos</h2>
+<aside class="notes">Este es un taller de microcontroladores con Micropython, el cual no requiere de conocimientos previos ni de
+Micropython, ni de microcontroladores ni de electrónica. Iremos desde el principio, pero estoy seguro que quienes
+tengáis ya experiencia, también aprenderéis algo nuevo.</aside></section>
+</section>
+<section >
+<section data-background-color="#333333" data-background-video="_images/laptop.mp4" data-background-video-loop="true" data-background-size="cover" id="ordenador-obligatorio">
+<h2>Ordenador <strong>obligatorio</strong></h2>
+<aside class="notes">Durante este taller, será necesario el uso de un ordenador con conexión a Internet. Si no habéis traído uno,
+podréis atender y mirar las prácticas de los compañeros.</aside></section>
+</section>
+<section >
+<section data-background-color="#000000" data-background-image="_images/wireless_background.png" data-background-size="cover" id="conexion-wifi">
+<h2>Conexión <strong>WiFI</strong></h2>
+<aside class="notes">Vamos a lo primero, la conexión WiFi. Esperemos que vaya bien la red de la organización...
+¿Vais teniendo ya conexión? ¿Cómo os funciona?</aside></section>
+</section>
+<section >
+<section data-background-color="#4973ff" data-transition-speed="slow" data-transition="fade" id="qr">
+<h2>QR</h2>
+<a class="reference internal image-reference" href="_images/qr.svg"><img alt="_images/qr.svg" src="_images/qr.svg" style="width: 60%;" />
+</a>
+<aside class="notes">Vale, ahora que os vais conectando, id entrando a esta presentación, la cual usaremos durante todo el taller.
+Os espero unos segundos... ¿Os abre bien?</aside></section>
+</section>
+<section >
+<section data-background-color="#000000" data-background-image="_images/components_kits.jpg" id="kits-de-componentes">
+<h2>Kits de componentes</h2>
+<aside class="notes">Bien, como podréis haber adivinado, en este taller usaremos kits de componentes para trabajar, los cuales requieren
+del ordenador. Aquí tengo los kits, pero sólo dispongo de 15. ¿Quiénes habéis mirado antes de venir los requisitos
+y tenéis ya Internet? ¿quiénes ya estáis preparados con la presentación abierta en Google Chrome? Os voy
+repartiendo.</aside></section>
+</section>
+<section >
+<section data-background-color="#333333" data-background-video="_images/wokwi.mp4" data-background-video-loop="true" data-background-size="cover" id="simulador-online">
+<h2>Simulador <strong>online</strong></h2>
+<aside class="notes">Los que no tengáis kit, no os preocupéis, que también usaremos un simulador online. Podréis ayudar a quienes tengan
+kit, en equipos. Luego os pediré que os cambiéis de sitio para ver las prácticas. Esto lo haremos cuando lo kits
+estén repartidos de forma definitiva.</aside></section>
+</section>
+<section >
+<section data-background-color="#090a0f" id="hello-world">
+<h2><strong>Hello</strong> world</h2>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+print(" ".join(["hello", "world"]))
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo0.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<aside class="notes">Para comprobar el microcontrolador, conectad por USB, y en esta diapositiva pulsad en el botón de conectar, elegid
+el dispositivo, el cual suele ser algo así como USB JTAG y en el botón de ejecutar.</aside></section>
+<section data-background-color="#090a0f" id="posibles-problemas">
+<h3>Posibles <strong>problemas</strong></h3>
+<ul class="simple">
+<li class="fragment"><p>🐧 <strong>GNU/Linux</strong>. No está en el grupo dialout o no están las reglas de udev <a class="reference external" href="https://github.com/Nekmo/micropython-workshop/blob/master/demos/demo0/TROUBLESHOOTING.rst#gnulinux">(ver solución)</a>.</p></li>
+<li class="fragment"><p>🪟 <strong>Windows y Mac</strong>. No están los drivers instalados <a class="reference external" href="https://github.com/Nekmo/micropython-workshop/blob/master/demos/demo0/TROUBLESHOOTING.rst#windows">(ver solución)</a>.</p></li>
+</ul>
+<aside class="notes">Si no os funciona a la primera, pasadle por favor el kit a otra persona, no os quedéis sin usarlo. Mientras tanto,
+intentad estas soluciones según vuestro sistema. A los que tenéis GNU/Linux, os recomiendo ir mirando la solución,
+antes de recibir el kit de otro compañero, para ganar tiempo. Cuando lo tengáis resuelto, esperad que os llegue
+un kit y probad de nuevo.</aside></section>
+</section>
+<section >
+<section data-background-color="#090a0f" data-transition-speed="slow" data-transition="fade" id="sobre-mi-nekmo">
+<h2>Sobre mí <strong>Nekmo</strong></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/cara.svg"><img alt="_images/cara.svg" src="_images/cara.svg" style="width: 200px;" />
+</a>
+<p><em>Programador Python</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">Ahora, mientras vais probando los kits, dejadme presentarme... Soy Juan José, aunque muchos me conocen en redes
+como Nekmo, y puede que me conozcáis por charlas anteriores tanto aquí como en Python Málaga.</aside></section>
+</section>
+<section >
+<section data-background-color="#090a0f" id="otras-charlas">
+<h2>Otras <strong>charlas</strong>...</h2>
+<a class="reference internal image-reference" href="_images/talks1.jpg"><img alt="_images/talks1.jpg" class="align-center" src="_images/talks1.jpg" style="width: 32%;" />
+</a>
+<a class="reference internal image-reference" href="_images/talks2.jpg"><img alt="_images/talks2.jpg" class="align-center" src="_images/talks2.jpg" style="width: 32%;" />
+</a>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="_images/python-malaga-logo-white.png"><img alt="_images/python-malaga-logo-white.png" class="align-center" src="_images/python-malaga-logo-white.png" style="width: 10%;" />
+</a>
+<a class="reference internal image-reference" href="_images/plytix-logo-white.svg"><img alt="_images/plytix-logo-white.svg" class="align-center" src="_images/plytix-logo-white.svg" style="width: 35%;" />
+</a>
+<aside class="notes">Si venís de Málaga, os recomiendo echarle un ojo a nuestra comunidad, donde hacemos charlas tan chulas como la
+que veis en las fotos. Hemos hecho concursos, networking, y mucho más. Las imágenes son de un evento del año
+pasado en las oficinas para las que trabajo, en Plytix. Permitidme preguntar, ¿cuántos tenéis ya funcionando
+el kit?</aside></section>
+</section>
+<section >
+<section data-background-color="#000000" data-background-image="_images/microcontrollers_background.png" id="microcontroladores">
+<h2>Microcontroladores</h2>
+<aside class="notes">No os preocupéis si os seguís peleando con ello, sólo recordad pasarle el kit a otro mientras
+equipo. Mientras, voy a ir hablando de los microcontroladores.</aside></section>
+<section data-background-color="#090a0f" id="que-son">
+<h3>¿Qué son?</h3>
+<ul class="simple">
+<li class="fragment"><p><strong>Ventajas</strong></p>
+<ul>
+<li><p>🤏 Pequeños</p></li>
+<li><p>🤑 Económicos</p></li>
+<li><p>🪫 Bajo consumo</p></li>
+</ul>
+</li>
+<li class="fragment"><p><strong>Desventajas</strong></p>
+<ul>
+<li><p>🐢 Poco potentes</p></li>
+<li><p>😓 Programación más compleja</p></li>
+</ul>
+</li>
+</ul>
+<aside class="notes">Como os podréis imaginar por el nombre, los microcontroladores son pequeños ordenadores, como puede ser una Raspberry
+Pi, pero mucho más pequeños y con menos recursos. Entre sus ventajas tenemos [...] y entre sus desventajas [...].</aside></section>
+<section data-background-color="#090a0f" id="algunos-usos">
+<h3>Algunos <strong>usos</strong></h3>
+<ul class="simple">
+<li class="fragment"><p>☁️ Domótica</p></li>
+<li class="fragment"><p>🤖 Robótica</p></li>
+<li class="fragment"><p>🔌 Electrónica</p></li>
+<li class="fragment"><p>🚧 Prototipos</p></li>
+<li class="fragment"><p>...</p></li>
+</ul>
+<aside class="notes">Se utilizan en muchos ámbitos, como la domótica, robótica, electrónica, prototipos y muchos más. Veremos algunos
+ejemplos finales como este coche teledirigido, o este dron.</aside></section>
+<section data-background-color="#333333" data-background-video="_images/robot_fall.mp4" data-background-video-loop="true" data-background-size="cover" id="gif-robot">
+<h3>GIF robot</h3>
+<aside class="notes">Gracias a ellos, podréis competir contra Boston Dynamics en robótica, y conseguir imágenes graciosas como esta.</aside></section>
+<section data-background-color="#090a0f" id="variantes">
+<h3>Variantes</h3>
+<ul class="simple">
+<li class="fragment"><p><strong>ESP8266/ESP32</strong></p>
+<ul>
+<li><p>🤑 Muy <strong>económico</strong></p></li>
+<li><p>😄 Múltiples <strong>variantes</strong></p></li>
+<li><p>👥 Gran <strong>comunidad</strong></p></li>
+</ul>
+</li>
+<li class="fragment"><p><strong>Raspberry Pi Pico</strong></p>
+<ul>
+<li><p>💸 <strong>Económico</strong></p></li>
+<li><p>🔨 Gran <strong>soporte</strong></p></li>
+<li><p>📚 Bien <strong>documentado</strong></p></li>
+</ul>
+</li>
+</ul>
+<aside class="notes">Entre los microcontroladores que soportan Micropython podemos destacar los ESP8266 y ESP32 [...] o la Raspberry Pi
+
+Pico [...], u otros más caros como la PyBoard, la oficial de Micropython.</aside></section>
+</section>
+<section >
+<section data-background-color="#000000" data-background-image="_images/esp32_background.jpg" id="esp32">
+<h2>ESP32</h2>
+<aside class="notes">Pero en este taller vamos a utilizar un ESP32, porque sencillamente...</aside></section>
+<section data-background-color="#333333" data-background-video="_images/empty_wallet.mkv" data-background-video-loop="true" data-background-size="cover" id="dinero">
+<h3>Dinero</h3>
+<aside class="notes">... la pela es la pela. Y es que son los más económicos. El microcontrolador que tenéis delante vuestra, cuesta
+entre 1.5€ aproximadamente. Y hablando del ESP32, ¿cómo lleváis los kits? Aún tengo para rato, por lo que podéis
+probando, descuidad...</aside></section>
+<section data-background-color="#090a0f" id="caracteristicas">
+<h3>Características</h3>
+<ul class="simple">
+<li class="fragment"><p>💪 <strong>Doble</strong> núcleo</p></li>
+<li class="fragment"><p>🛜 Conectividad <strong>WiFi</strong></p></li>
+<li class="fragment"><p>📡 Conectividad <strong>Bluetooth</strong></p></li>
+<li class="fragment"><p>🔌 Múltiples pines <strong>GPIO</strong></p></li>
+<li class="fragment"><p>📟 <strong>ADC</strong> / <strong>DAC</strong></p></li>
+</ul>
+<aside class="notes">Pero no sólo es barato. También tiene un montón de características interesantes como [...].</aside></section>
+</section>
+<section >
+<section data-background-color="#090a0f" id="micropython">
+<h2>Micropython</h2>
+<a class="reference internal image-reference" href="_images/micropython-logo.svg"><img alt="_images/micropython-logo.svg" class="align-center" src="_images/micropython-logo.svg" style="width: 35%;" />
+</a>
+<aside class="notes">Si recordáis, hemos dicho como uno de sus puntos débiles que son difíciles de programar. Y hasta hace no mucho era
+así. Pero desde hace unos años, tenemos algunas soluciones como Micropython que nos permiten programar estos
+microcontroladores de una forma más sencilla. Micropython es una variante de Python 3 reducida y adaptada para
+algunos de estos microcontroladores.</aside></section>
+<section data-background-color="#090a0f" id="primeros-pasos">
+<h3><strong>Primeros</strong> pasos</h3>
+<ul class="simple">
+<li class="fragment"><p>⚡ <strong>Flashear</strong> siguiendo la web de <a class="reference external" href="https://micropython.org/">Micropython</a></p></li>
+<li class="fragment"><p>📝 <strong>IDE web</strong> <a class="reference external" href="https://viper-ide.org/">(ViperIDE)</a>, local <a class="reference external" href="https://thonny.org/">(Thonny)</a>
+o <strong>esta presentación</strong></p></li>
+<li class="fragment"><p>▶️ <strong>Simulador online</strong> <a class="reference external" href="https://wokwi.com/">(Wokwi)</a>.</p></li>
+</ul>
+<aside class="notes">Y empezar con Micropython es muy sencillo. Sólo tenéis que descargar el binario del sitio web oficial, y flashearlo
+mediante la herramienta indicado. Los microcontroladores que tenéis, ya los he flasheado yo en casa. Tras ello,
+podéis usar un IDE web como Viper IDE, o un IDE local como Thonny. También podéis usar un simulador online como
+Wokwi, si no tenéis un microcontrolador físico. Y aunque lo tengáis, os recomiendo utilizarlo, ya que os permitirá
+probar cosas sin miedo a romper nada.</aside></section>
+<section data-background-color="#090a0f" id="por-que-micropython">
+<h3>¿Por qué <strong>Micropython</strong>?</h3>
+<ul class="simple">
+<li class="fragment"><p><strong>Ventajas</strong></p>
+<ul>
+<li><p>😄 <strong>Fácil</strong> de aprender</p></li>
+<li><p>🚀 <strong>Prototipado</strong> rápido</p></li>
+<li><p>🔋 <strong>Pilas incluidas</strong></p></li>
+</ul>
+</li>
+<li class="fragment"><p><strong>Desventajas</strong></p>
+<ul>
+<li><p>🐢 Más <strong>lento</strong></p></li>
+<li><p>📦 Menos <strong>módulos</strong></p></li>
+<li><p>📏 Menos <strong>memoria</strong></p></li>
+</ul>
+</li>
+</ul>
+<aside class="notes">¿Y por qué usar Micropython? Entre sus ventajas tenemos [...] y entre sus desventajas [...]. Aún así, es una
+herramienta fantástica para iniciarse en este mundillo, y es genial para prototipar ideas rápidamente.</aside></section>
+</section>
+<section >
+<section data-background-color="#000000" data-background-image="_images/juego_sillas.jpg" id="nos-recolocamos">
+<h2>Nos <strong>recolocamos</strong></h2>
+<aside class="notes">Y listas las presentaciones, vamos a movernos un poco para quienes no tengan un kit también puedan ver y colaborar.
+Vamos, que es como si jugásemos a las sillas. Levantad la mano quienes tengáis un kit. Perfecto. Vamos a intentar
+entre todos, que quienes no tengan kit, tengan la oportunidad de ver y colaborar en las prácticas.</aside></section>
+</section>
+<section >
+<section data-background-color="#090a0f" id="lo-basico-de-electronica">
+<h2>Lo básico de <strong>electrónica</strong></h2>
+<ul class="simple">
+<li class="fragment"><p>⚡ La mayoría de los componentes son <strong>polarizados</strong>.</p></li>
+<li class="fragment"><p>🌍 Todos los componentes deben ir a <strong>tierra</strong> (cable <em>negro</em>).</p></li>
+<li class="fragment"><p>💡 Usar <strong>resistencias</strong> con los <em>LED</em>.</p></li>
+</ul>
+<aside class="notes">Y mientras termináis de asentaros, vamos a repasar algunas cosas básicas de electrónica. Recordar: [...]</aside></section>
+<section data-background-color="#DDDDDD" id="protoboard">
+<h3>Protoboard</h3>
+<a class="reference internal image-reference" href="_images/protoboard.png"><img alt="_images/protoboard.png" src="_images/protoboard.png" style="width: 60%;" />
+</a>
+<aside class="notes">Para las prácticas, usaremos una protoboard. En esta, las filas del centro están conectadas entre sí,
+y las columnas de los lados, que usaremos para tierra y el voltaje (esto último sólo en las últimas
+prácticas), también están conectadas entre sí. Aprovecharemos esto para hacer uniones entre cables y
+componentes.</aside></section>
+<section data-background-color="#090a0f" id="avisos-de-seguridad">
+<h3>Avisos de <strong>seguridad</strong></h3>
+<ul class="simple">
+<li class="fragment"><p>🚫 <strong>NUNCA cortocircuitar</strong> pines.</p></li>
+<li class="fragment"><p>⚠️ <strong>CUIDADO</strong> con el <strong>pin de 5V</strong>.</p></li>
+<li class="fragment"><p>👁️ <strong>Fijarse</strong> bien antes de conectar cables y componentes.</p></li>
+</ul>
+<aside class="notes">Y por último, pero no más importante, unos avisos importantes de seguridad: [...].</aside></section>
+</section>
+<section >
+<section data-background-color="#333333" data-background-video="_images/resistor_fire.mp4" data-background-video-loop="true" data-background-size="cover" id="demos">
+<h2>Demos</h2>
+<aside class="notes">Y ahora, seguro que queréis que empecemos a hacer cosas. Esperemos que no tengamos ninguna desgracia.</aside></section>
+</section>
+<section >
+<section data-background-color="#333333" data-background-video="_images/leds.mp4" data-background-video-loop="true" data-background-size="cover" id="encender-un-led">
+<h2>Encender un <strong>led</strong></h2>
+<aside class="notes">Vamos a empezar por lo más sencillo de todo. Encender un led. El ejemplo más típico de todos.</aside></section>
+<section data-background-color="#DDDDDD" id="identificar-los-pines">
+<h3>Identificar <strong>los pines</strong></h3>
+<a class="reference internal image-reference" href="_images/datasheet.png"><img alt="_images/datasheet.png" src="_images/datasheet.png" style="width: 60%;" />
+</a>
+<aside class="notes">Aunque antes de empezar cualquier circuito, es imprescindible identificar los pines de nuestro controlador. Aquí
+tenéis los pines de nuestro ESP32. De momento sólo trabajaremos con el GPIO 1 y la tierra. Cuidado al identificar
+la tierra, ya que está justo al lado del pin de 5V, el cual no debemos usar de momento.</aside></section>
+<section data-background-color="#DDDDDD" id="conectar-el-led">
+<h3><strong>Conectar</strong> el led</h3>
+<a class="reference internal image-reference" href="_images/resistor.png"><img alt="_images/resistor.png" src="_images/resistor.png" style="width: 30%;" />
+</a>
+<a class="reference internal image-reference" href="_images/led.png"><img alt="_images/led.png" src="_images/led.png" style="width: 20%;" />
+</a>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wokwi.com/projects/441387172284308481">✏️ Ejercicio sin resolver</a></p></li>
+<li><p><a class="reference external" href="https://wokwi.com/projects/441386639666392065">✅ Ejercicio resuelto</a></p></li>
+</ul>
+<aside class="notes">Para nuestro circuito, necesitaremos un LED como el que tenéis en la imagen. Necesitaremos además una resistencia
+para protegerlo. Aquí debajo tenéis enlaces al simulador online Wokwi. Empezaremos con el ejercicio sin resolver, y
+siendo el primero, voy a resolverlo yo primero junto con vosotros.</aside></section>
+<section data-background-color="#090a0f" id="codigo-led">
+<h3>Código <strong>led</strong></h3>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+from machine import Pin
+from time import sleep
+
+led = Pin(1, Pin.OUT)
+
+while True:
+    led.on()
+    sleep(0.5)
+    led.off()
+    sleep(0.5)
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+</section>
+<section >
+<section data-background-color="#DDDDDD" id="led-analogico">
+<h2>LED <strong>analógico</strong></h2>
+<div  class="sphinx-contrib-video-container align-left"><video autoplay="True" controls="True" loop="True" muted="True" preload="auto" width="60%"><source src="_images/led_breathing.mkv" type=""></video></div><ul class="simple">
+<li><p><a class="reference external" href="https://wokwi.com/projects/441387365772801025">✏️ Ejercicio sin resolver</a></p></li>
+<li><p><a class="reference external" href="https://wokwi.com/projects/440571798883168257">✅ Ejercicio resuelto</a></p></li>
+</ul>
+<aside class="notes">Ahora, sin cambiar nada en el circuito, vamos a hacer que el led varíe su intensidad. Mientras que en el anterior
+ejemplo sólo se comportaba de forma digital, es decir, encendido o apagado, en este caso lo haremos de forma
+analógica, lo cual nos permitirá variar su intensidad. En esta ocasión, os dejo a vosotros resolver el ejercicio, y
+luego lo vemos juntos.</aside></section>
+<section data-background-color="#090a0f" id="codigo-led-analogico">
+<h3>Código led <strong>analógico</strong></h3>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+from machine import Pin, PWM
+from time import sleep
+
+led = Pin(1)
+pwm = PWM(led)
+
+
+while True:
+    for i in range(0, 1024, 10):
+        pwm.duty(i)
+        sleep(0.01)
+    for i in range(1023, -1, -10):
+        pwm.duty(i)
+        sleep(0.01)
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+<section data-background-color="#333333" data-background-video="_images/house_leds.mp4" data-background-video-loop="true" data-background-size="cover" id="gif-luces-led">
+<h3>GIF luces LED</h3>
+<aside class="notes">Y ahora, ya sabéis cómo llenar vuestra casa de lucecitas LED.</aside></section>
+</section>
+<section >
+<section data-background-color="#DDDDDD" id="conectar-un-boton">
+<h2>Conectar <strong>un botón</strong></h2>
+<a class="reference internal image-reference" href="_images/switch.png"><img alt="_images/switch.png" src="_images/switch.png" style="width: 30%;" />
+</a>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wokwi.com/projects/441388877026727937">✏️ Ejercicio sin resolver</a></p></li>
+<li><p><a class="reference external" href="https://wokwi.com/projects/440572379251171329">✅ Ejercicio resuelto</a></p></li>
+</ul>
+<aside class="notes">No sólo podemos entregar valores de salida. También podemos leer valores de entrada, como es el caso con el botón
+que tenéis en la imagen. El circuito es similar al del LED, pero en este caso no usaremos una resistencia, ya que el
+propio microcontrolador tiene una resistencia pull-up interna, la cual debemos configurar para usarla. Tened en
+cuenta que el botón tiene 4 patillas, estando unidas a pares. Las patillas que están unidas, son las que están más
+lejos entre sí. Haremos con el ejercicio igual que antes, pero esta vez tendréis que hacer el circuito.</aside></section>
+<section data-background-color="#090a0f" id="codigo-boton">
+<h3><strong>Código</strong> botón</h3>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+from machine import Pin, UART
+from time import sleep
+
+button = Pin(1, Pin.IN, Pin.PULL_UP)
+
+
+while True:
+    state = not button.value()
+    print(int(state))
+    sleep(0.1)
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+<section data-background-color="#333333" data-background-video="_images/arcades.mp4" data-background-video-loop="true" data-background-size="cover" id="gif-recreativa">
+<h3>GIF recreativa</h3>
+<aside class="notes">Con esto, ya estáis capacitados para crear vuestra propia recreativa con todos los botones que queráis.</aside></section>
+</section>
+<section >
+<section data-background-color="#DDDDDD" id="conectar-un-led-rgb">
+<h2>Conectar un <strong>LED RGB</strong></h2>
+<a class="reference internal image-reference" href="_images/resistor.png"><img alt="_images/resistor.png" src="_images/resistor.png" style="width: 30%;" />
+</a>
+<a class="reference internal image-reference" href="_images/rgb_led.png"><img alt="_images/rgb_led.png" src="_images/rgb_led.png" style="width: 14%;" />
+</a>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wokwi.com/projects/441390660052679681">✏️ Ejercicio sin resolver</a></p></li>
+<li><p><a class="reference external" href="https://wokwi.com/projects/440573050467784705">✅ Ejercicio resuelto</a></p></li>
+</ul>
+<aside class="notes">Y para vuestra recreativa, no pueden faltar LEDs RGB a todo color. Como muchos sabréis, las siglas de RGB proceden de
+Red, Green y Blue, que son los colores primarios de la luz. Cada uno de estos colores corresponderá a un pin GPIO,
+por lo que esta vez necesitaremos tres pines, y un cuarto pin para tierra. De la imagen, el pin de tierra es el más
+largo, y los otros tres son los de los colores. Recordad usar resistencias por cada pin de color. El circuito es
+igual que el del LED normal, pero con 3 LEDs en uno solo. Ahora, os dejo con el ejercicio.</aside></section>
+<section data-background-color="#090a0f" id="codigo-led-rgb">
+<h3><strong>Código</strong> LED RGB</h3>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+from machine import Pin, PWM
+from time import sleep
+import urandom
+
+
+r = PWM(Pin(1), freq=1000)
+g = PWM(Pin(2), freq=1000)
+b = PWM(Pin(3), freq=1000)
+
+
+def set_color(red, green, blue):
+    r.duty(red)
+    g.duty(green)
+    b.duty(blue)
+
+
+while True:
+    red = urandom.getrandbits(10)
+    green = urandom.getrandbits(10)
+    blue = urandom.getrandbits(10)
+    set_color(red, green, blue)
+    sleep(1)
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+<section data-background-color="#333333" data-background-video="_images/cables.mp4" data-background-video-loop="true" data-background-size="cover" id="gif-cientos-de-cables">
+<h3>GIF cientos de cables</h3>
+<aside class="notes">Pero claro, si quisiésemos tener varios leds RGB, cada uno con su color, necesitaríamos un montón de cables y ocupar
+todos los pines GPIO de nuestra placa, los cuales son muy valiosos. Para ello disponemos de protocolos de
+comunicación, que nos permiten comunicarnos con varios dispositivos a la vez.</aside></section>
+</section>
+<section >
+<section data-background-color="#090a0f" id="protocolos-de-comunicacion">
+<h2><strong>Protocolos</strong> de comunicación</h2>
+<ul class="simple">
+<li class="fragment"><p>1️⃣ <strong>OneWire</strong> (1 pin)</p></li>
+<li class="fragment"><p>2️⃣ <strong>I2C</strong> (2 pines)</p></li>
+<li class="fragment"><p>3️⃣ <strong>SPI</strong> (3/4+ pines)</p></li>
+<li class="fragment"><p>📟 <strong>UART</strong> (2+ pines)</p></li>
+</ul>
+<aside class="notes">Disponemos de diferentes protocolos de comunicación, que suelen variar en el número de pines, en su velocidad,
+su uso, etc. Por ejemplo, oneWire sólo llega a necesitar un pin, pero es muy lento. I2C sólo necesita 2 pines, siendo
+muy popular. SPI parte de 3 a 4 pines, pudiendo requerir más si tenemos varios dispositivos. UART, que algunos
+recordaréis de los serial bus, parte de 2 pines... y así podríamos continuar. También tenemos protocolos específicos
+y diseñados para casos concretos, como el que veremos ahora. Recordad que con cada protocolo, necesitaremos utilizar
+adicionalmente una tierra, que no se cuenta como pin de comunicación.</aside></section>
+</section>
+<section >
+<section data-background-color="#DDDDDD" id="conectar-un-led-ws2812">
+<h2>Conectar un <strong>led WS2812</strong></h2>
+<a class="reference internal image-reference" href="_images/resistor.png"><img alt="_images/resistor.png" src="_images/resistor.png" style="width: 25%;" />
+</a>
+<a class="reference internal image-reference" href="_images/apa106.png"><img alt="_images/apa106.png" src="_images/apa106.png" style="width: 10%;" />
+</a>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wokwi.com/projects/441391974099865601">✏️ Ejercicio sin resolver</a></p></li>
+<li><p><a class="reference external" href="https://wokwi.com/projects/440574036913642497">✅ Ejercicio resuelto</a></p></li>
+</ul>
+<aside class="notes">Vamos a empezar con el protocolo WS2812, o APA106, que es el que utilizan los LEDs RGB de tipo NeoPixel. Este
+protocolo unidireccional sólo necesita un pin de datos, pudiendo conectar varios LEDs a la vez, cada uno con su
+color. En la imagen tenéis un LED de tipo Neopixel, no lo confundáis con el anterior. Cada patilla tiene su longitud.
+El pin más largo es 5V, el que está a su lado izquierdo es el de tierra, el más corto es el de datos, y el que está
+al otro lado es la salida, que nos permitirá conectar más LEDs en cadena. Cuando hagáis el circuito, no
+conectéis el pin de 5V hasta que estéis seguros de que todo está bien, y fijaros bien en los pines, o quemaréis el
+LED. Ahora, os dejo con el ejercicio.</aside></section>
+<section data-background-color="#090a0f" id="codigo-led-ws2812">
+<h3><strong>Código</strong> LED WS2812</h3>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+from machine import Pin
+from apa106 import APA106
+from time import sleep
+
+NUM_LEDS = 3
+
+pin = Pin(1)
+leds = APA106(pin, NUM_LEDS)
+colors = [
+    (255, 0, 0),
+    (0, 255, 0),
+    (0, 0, 255),
+]
+offset = 0
+
+
+while True:
+    for num_led in range(NUM_LEDS):
+        next_color = colors[(num_led + offset) % NUM_LEDS]
+        leds[num_led] = next_color
+    leds.write()
+    offset = (offset + 1) % NUM_LEDS
+    sleep(0.5)
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+</section>
+<section >
+<section data-background-image="_images/i2c_background.png" data-background-size="cover" id="i2c">
+<h2><strong>I2C</strong></h2>
+<aside class="notes">Aunque el protocolo WS2812 nos permite controlar múltiples LEDs individualmente con un solo cable, es un protocolo
+unidireccional diseñado en exclusiva para LEDs. En cambio, tenemos otros protocolos como I2C, que nos permiten
+comunicarnos con otros dispositivos, como pantallas, sensores, etc. Es un protocolo bidireccional que como dijimos
+antes, sólo necesita 2 pines. Para esta práctica, vamos a conectar una pantalla y un sensor a un mismo I2C. A los
+que hayáis terminado el ejercicio anterior, ahora os daré el kit para esta práctica, de la cual sólo tengo 5. Si
+os quedáis esperando, os puedo dar otros componentes para que hagáis más pruebas.</aside></section>
+</section>
+<section >
+<section data-background-color="#DDDDDD" id="conectar-sensor-y-pantalla-i2c">
+<h2>Conectar <strong>sensor</strong> y <strong>pantalla I2C</strong></h2>
+<a class="reference internal image-reference" href="_images/sht41.png"><img alt="_images/sht41.png" src="_images/sht41.png" style="width: 26%;" />
+</a>
+<a class="reference internal image-reference" href="_images/ssd1306.png"><img alt="_images/ssd1306.png" src="_images/ssd1306.png" style="width: 30%;" />
+</a>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wokwi.com/projects/441394565508740097">✏️ Ejercicio sin resolver</a></p></li>
+<li><p><a class="reference external" href="https://wokwi.com/projects/441393628155164673">✅ Ejercicio resuelto</a></p></li>
+</ul>
+<aside class="notes">Para esta pŕactica, vamos a conectar tanto la pantalla como un sensor de temperatura a un mismo I2C, el cual utiliza
+2 pines, SCL y SDA. Necesitaremos además una tierra y una alimentación. Cada dispositivo I2C tiene una dirección
+única, la cual debemos conocer para comunicarnos con él. No obstante, podemos utilizar el escáner I2C para conocer
+la dirección de nuestros dispositivos. En este caso, la pantalla es una OLED de 128x64 píxeles, y el sensor un SHT41
+para medir la temperatura y humedad. No necesitaremos resistencias, y qué es cada pin está indicado en el componente.
+Vamos ahora con el ejercicio.</aside></section>
+<section data-background-color="#090a0f" id="codigo-sensor-y-pantalla-i2c">
+<h3><strong>Código</strong> sensor y pantalla I2C</h3>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+from machine import Pin, I2C
+from time import sleep
+from ssd1306 import SSD1306_I2C
+from sht4x import SHT4X
+
+
+scl = Pin(1)
+sda = Pin(2)
+i2c = I2C(0, scl=scl, sda=sda)
+print(i2c.scan())
+
+oled = SSD1306_I2C(128, 64, i2c, 0x3C)
+sensor = SHT4X(i2c, 0x44)
+
+
+while True:
+    temperature, humidity = sensor.measurements
+    oled.fill(0)
+    temperature_text = "Temp: {:.1f} C".format(temperature)
+    humidity_text = "Hum:  {:.1f} %".format(humidity)
+    oled.text(temperature_text, 0, 10)
+    oled.text(humidity_text, 0, 30)
+    oled.show()
+    sleep(2)
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo6.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+</section>
+<section >
+<section data-background-image="_images/wireless_background.png" data-background-size="cover" id="wifi-y-bluetooth">
+<h2><strong>WiFi</strong> y <strong>bluetooth</strong></h2>
+<aside class="notes">Pero no sólo disponemos de protocolos de comunicación alámbrica, es decir, cableada. Todos los modelos de ESP32,
+como el que tenéis delante, cuentan con WiFi y bluetooth. Y algunos modelos también Zigbee.</aside></section>
+<section data-background-color="#090a0f" id="codigo-coche">
+<h3><strong>Código</strong> coche</h3>
+
+<div class="micropython-demo">
+  <pre style="display: none;">
+import json
+import time
+import network
+import web
+from hardware import I2C
+from hardware import Pin
+from web import WebSocket
+import uasyncio as asyncio
+
+i2c0 = I2C(0, scl=Pin(26), sda=Pin(0), freq=400000)
+i2c0.writeto_mem(0x38, 0x00, bytearray([0, 0, 0, 0]))
+
+ap = network.WLAN(network.AP_IF)
+ap.active(True)
+ap.config(essid='roverc.pro', password='roverc.pro', authmode=network.AUTH_WPA_WPA2_PSK)
+
+while not ap.active():
+    time.sleep(1)
+
+ip = ap.ifconfig()[0]
+print('IP:', ip)
+
+app = web.App(host='0.0.0.0', port=80)
+
+
+def normalize_value(value: int | float) -> bytes:
+    value = int(value)
+    if value >= 128:
+        value = 127  # The maximum value in positive is 127
+    if value < 0:
+        value = (256 + value)
+    return value.to_bytes(1, "big")
+
+
+def coords_to_mecano_wheels(x: int, y: int, maximum: int = 127):
+    r1 = x + y
+    r2 = -x + y
+    r3 = -x + y
+    r4 = x + y
+    values = [r1, r2, r3, r4]
+    max_val = max(abs(v) for v in values)
+    if max_val > maximum:
+        factor = maximum / max_val
+        values = [v * factor for v in values]
+    return [normalize_value(v) for v in values]
+
+
+async def serve_static(w, filename, mimetype):
+    # write http headers
+    w.write('HTTP/1.0 200 OK\r\n')
+    w.write(f'Content-Type: {mimetype}; charset=utf-8\r\n')
+    w.write('\r\n')
+    # write page body
+    with open(filename, 'r') as f:
+        w.write(f.read())
+    # drain stream buffer
+    await w.drain()
+
+
+# root route handler
+@app.route('/')
+async def handler(r, w):
+    return await serve_static(w, "index.html", "text/html")
+
+
+# root route handler
+@app.route('/joy.min.js')
+async def serve_script(r, w):
+    return await serve_static(w, "joy.min.js", "application/javascript")
+
+
+# /ws WebSocket route handler
+@app.route('/ws')
+async def ws_handler(r, w):
+    # upgrade connection to WebSocket
+    ws = await WebSocket.upgrade(r, w)
+    latest = None
+    while True:
+        evt = await ws.recv()
+        if evt is None or evt['type'] == 'close':
+            # handle closed stream/close event
+            break
+        elif evt['type'] == 'text':
+            # print received messages and echo them
+            print('Received:', evt['data'])
+            data = json.loads(evt['data'])
+            if "x" in data and "y" in data:
+                x, y = data['x'], data['y']
+                if (x, y) == latest:
+                    continue
+                try:
+                    wheel1, wheel2, wheel3, wheel4 = coords_to_mecano_wheels(x, y)
+                except OverflowError:
+                    continue
+                print("Wheels:", *(w[0] for w in (wheel1, wheel2, wheel3, wheel4)))
+                i2c0.writeto_mem(0x38, 0x00, b"".join([wheel1, wheel2, wheel3, wheel4]))
+                latest = x, y
+            elif "claw" in data:
+                value = 8 if data["claw"] else 87
+                i2c0.writeto_mem(0x38, 0x10, value.to_bytes(1, 'big'))
+
+
+# Start event loop and create server task
+loop = asyncio.get_event_loop()
+loop.create_task(app.serve())
+loop.run_forever()
+  </pre>
+  
+  <div>
+  
+    <div class="toolbar">
+      <label for="font-size">Fuente:</label>
+      <select class="font-size">
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option selected>20</option>
+        <option>24</option>
+        <option>28</option>
+        <option>32</option>
+        <option>36</option>
+        <option>40</option>
+      </select>
+    
+      <label for="theme">Tema:</label>
+      <select class="theme">
+        <option value="vs">Claro</option>
+        <option value="vs-dark" selected>Oscuro</option>
+        <option value="hc-black">Alto contraste</option>
+      </select>
+    
+      <span class="status-indicator"></span>
+      <button class="connect">Conectar</button>
+      <button class="send" disabled>▶ Ejecutar</button>
+      <button class="restart" disabled>Reiniciar</button>
+      <button class="toggle-video">Cámara</button>
+    </div>
+    
+    <div class="container">
+      <div class="editor"></div>
+      <div class="resizer"></div>
+      <div class="terminal"></div>
+    </div>
+
+  </div>
+  
+  <video controls class="micropython-demo-video" loop autoplay style="display: none;">
+    <source src="_static/demo7.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<aside class="notes">En este último ejemplo no me voy a extender mucho. Inicializamos un access point, y un servidor web con soporte para
+websockets, el cual permite conectarnos al coche y controlarlo desde el navegador.</aside></section>
+<section data-background-color="#DDDDDD" id="demo-coche">
+<h3>Demo <strong>coche</strong></h3>
+<iframe src="http://192.168.4.1/" height="600px" width="100%" style="border: 0;"></iframe><aside class="notes">¡Ahora, vamos a ver el coche en acción!</aside></section>
+<section data-background-color="#DDDDDD" id="pruebalo-tu-mismo">
+<h3>¡Pruébalo tú mismo!</h3>
+<ul class="simple">
+<li><p><strong>SSID:</strong> roverc.pro</p></li>
+<li><p><strong>Password:</strong> roverc.pro</p></li>
+<li><p><strong>Url:</strong> <a class="reference external" href="http://192.168.4.1">http://192.168.4.1</a></p></li>
+</ul>
+<aside class="notes">Y por si os sabe a poco, ¡os invito a probarlo vosotros mismos! Conectad vuestro móvil al wifi del coche, y acceded a
+la dirección indicada.</aside></section>
+</section>
+<section >
+<section data-background-image="_images/wireless_background.png" data-background-size="cover" id="esp-now">
+<h2>ESP-Now</h2>
+<aside class="notes">Además, Espressif, la empresa detrás de los ESP, ha desarrollado un protocolo de comunicación propio que se encuentra
+disponible en Micropython, basado en WiFi. Es más sencilllo de utilizar, tiene una menor latencia, un mayor alcance,
+y un menor consumo que el WiFi tradicional. Es un protocolo perfecto para por ejemplo...</aside></section>
+<section data-background-color="#DDDDDD" id="demo-dron">
+<h3>Demo <strong>dron</strong></h3>
+<aside class="notes">¡Un dron!</aside></section>
+</section>
+<section >
+<section data-background-gradient="linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);" id="muchas-gracias-a-todos">
+<h2>¡Muchas gracias a todos!</h2>
+<aside class="notes">Y mientras os dejo jugando con el coche... ¡Hasta aquí el taller! Espero que hayáis disfrutado y aprendido
+algo nuevo. Sé que no hemos tenido mucho tiempo para verlo todo, pero si tenéis dudas, estoy disponible para
+resolverlas.</aside></section>
+</section>
+<section >
+<section data-background-color="#333333" data-transition-speed="default" data-transition="fade" id="recursos">
+<h2>Recursos</h2>
+<ul class="simple">
+<li class="fragment"><p>🌐 <strong>Web oficial</strong>: <a class="reference external" href="https://micropython.org">https://micropython.org</a></p></li>
+<li class="fragment"><p>📝 <strong>Editor online</strong>: <a class="reference external" href="https://viper-ide.org">https://viper-ide.org</a></p></li>
+<li class="fragment"><p>🥽 <strong>Simulador online</strong>: <a class="reference external" href="https://wokwi.com">https://wokwi.com</a></p></li>
+</ul>
+<aside class="notes">Os dejo aquí disponibles estos recursos, para empezar a trabajar con Micropython.</aside></section>
+</section>
+<section >
+<section data-background-color="#4973ff" data-transition-speed="slow" data-transition="fade" id="python-malaga">
+<h2>Python <strong>Málaga</strong></h2>
+<ul class="simple">
+<li><p>🌐 <strong>Sitio web:</strong> <a class="reference external" href="https://www.python-malaga.es/">python-malaga.es</a>.</p></li>
+<li><p>🤝 <strong>Meetup:</strong> <a class="reference external" href="https://www.meetup.com/Python-Malaga/">meetup.com/Python-Malaga</a>.</p></li>
+<li><p>🐦 <strong>Twitter:</strong> <a class="reference external" href="https://twitter.com/python_malaga">&#64;python_malaga</a>.</p></li>
+<li><p>‍💼 <strong>LinkedIn:</strong> <a class="reference external" href="https://www.linkedin.com/groups/13110576/">linkedin.com/groups/13110576</a>.</p></li>
+<li><p>📱 <strong>Telegram:</strong> <a class="reference external" href="https://t.me/python_malaga">python_malaga</a>.</p></li>
+</ul>
+<aside class="notes">Y para más presentaciones y talleres, apuntaros a la comunidad de Python Málaga, donde hacemos más eventos como este.
+No olvidéis seguirnos en nuestras redes sociales, y en nuestro grupo de Telegram.</aside></section>
+<section data-background-color="#333333" data-transition-speed="default" data-transition="fade" id="contactar">
+<h3><strong>Contactar</strong></h3>
+<ul class="simple">
+<li><p>🌐 <strong>Sitio web:</strong> <a class="reference external" href="https://nekmo.com">nekmo.com</a></p></li>
+<li><p>📫 <strong>Email:</strong> <a class="reference external" href="mailto:contacto&#37;&#52;&#48;nekmo&#46;com">contacto<span>&#64;</span>nekmo<span>&#46;</span>com</a></p></li>
+<li><p>🐦 <strong>Twitter:</strong> <a class="reference external" href="https://twitter.com/nekmocom">&#64;nekmocom</a></p></li>
+<li><p>📱 <strong>Telegram:</strong> <a class="reference external" href="https://t.me/nekmo">&#64;nekmo</a></p></li>
+<li><p>💡 <strong>Jabber:</strong> <a class="reference external" href="xmpp://nekmo&#64;nekmo.org">nekmo&#64;nekmo.org</a></p></li>
+</ul>
+<aside class="notes">A cualquier cosa, tenéis mi contacto disponible.</aside></section>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="_static/revealjs/dist/reveal.js"></script>
+    
+    
+      <script src="_static/revealjs/plugin/notes/notes.js"></script>
+      <script src="_static/revealjs/plugin/highlight/highlight.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"controls": true, "progress": true, "history": true, "center": true, "margin": 0.2, "transition": "slide", "scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealNotes,RevealHighlight,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>

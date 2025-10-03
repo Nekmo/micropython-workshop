@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Tester</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="../../_static/revealjs/dist/theme/.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=6d7ffba9" />
+    <script src="../../_static/main.js?v=99295717"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section  id="tester">
+<h1>Tester</h1>
+<p>Esta carpeta no es una demostración del taller. Se trata de una herramienta utilizada durante la elaboración de este
+taller, y durante el mismo para verificar los microcontroladores.</p>
+<p>Este tester está pensado para su uso en una Raspberry Pi. El código está en Python 3, no pertenece a Micropython.
+Ejecuta un código simple en Micropython en el microcontrolador que se conecta por USB, y verifica que se obtiene la
+respuesta esperada. Además, verifica los GPIO del microcontrolador desde el 0 al 4, y los pines de 3.3V y 5V.</p>
+<p>En caso de que el test falle, se indicará con un pitido de error, e intentará resetear el microcontrolador, escribir
+de nuevo Micropthon, subir los ficheros de la carpeta <code class="docutils literal notranslate"><span class="pre">esp_files</span></code> y volver a ejecutar el test.</p>
+<p>El fichero <code class="docutils literal notranslate"><span class="pre">main.py</span></code> es el código utilizado en Raspberry Pi para realizar el test. El fichero <code class="docutils literal notranslate"><span class="pre">test.py</span></code> es el
+código que se ejecuta en el microcontrolador para realizar las pruebas. La imagen
+<code class="docutils literal notranslate"><span class="pre">ESP32_GENERIC_C3-20250809-v1.26.0.bin</span></code> corresponde a la versión de Micropython utilizada durante el taller, y que
+debe utilizarse con los ESP32 C3.</p>
+<p>Se adjunta además un vídeo demostrativo del uso de este tester en esta misma carpeta.</p>
+
+        </div>
+    </div>
+    
+    <script src="../../_static/revealjs/dist/reveal.js"></script>
+    
+    
+      <script src="../../_static/revealjs/plugin/notes/notes.js"></script>
+      <script src="../../_static/revealjs/plugin/highlight/highlight.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"controls": true, "progress": true, "history": true, "center": true, "margin": 0.2, "transition": "slide", "scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealNotes,RevealHighlight,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>

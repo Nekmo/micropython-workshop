@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Demo 0</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="../../_static/revealjs/dist/theme/.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=6d7ffba9" />
+    <script src="../../_static/main.js?v=99295717"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section  id="demo-0">
+<h1>Demo 0</h1>
+<p>Esta demo no es una demostración de por sí. Es sólo una prueba para verificar que el entorno de desarrollo está funcionando correctamente.</p>
+<pre data-id="demo-0"><code data-trim data-noescape class="python">print(&quot; &quot;.join([&quot;hello&quot;, &quot;world&quot;]))</code></pre>
+<p>La salida debería ser:</p>
+<pre data-id="demo-0"><code data-trim data-noescape class="none">hello world</code></pre>
+</section>
+</section>
+<section >
+<section  id="componentes">
+<h2>Componentes</h2>
+<ul class="simple">
+<li><p>Microcontrolador compatible con Micropython, como ESP32 o Raspberry Pi Pico.</p></li>
+<li><p>Cable USB para conectar el microcontrolador al ordenador.</p></li>
+<li><p>Entorno de desarrollo compatible con Micropython. Puede utilizarse esta misma presentación.</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section  id="instalacion">
+<h2>Instalación</h2>
+<ul class="simple">
+<li><p>Conecta el microcontrolador al ordenador mediante el cable USB. Durante el taller, se provee un cable
+USB-C a USB-A. Si tu ordenador no tiene puerto USB-A, necesitarás un adaptador o un cable que disponga
+de USB-C en el extremo que se conecta al microcontrolador. Si tu microcontrolador no tiene conector USB-C,
+necesitarás un cable adecuado para tu modelo.</p></li>
+<li><p>Los microcontroladores que se proveen durante el taller ya tienen Micropython instalado. Si
+necesitasinstalarlo o actualizarlo, sigue las instrucciones en <a class="reference external" href="https://micropython.org/download/">https://micropython.org/download/</a></p></li>
+<li><p>Utilizando esta presentación, abre la diapositiva correspondiente a esta demo, pulsa el botón &quot;Conectar&quot;
+y selecciona el puerto serie asociado a tu microcontrolador.</p></li>
+</ul>
+<p>En caso de problemas, consulta el archivo <a class="reference external" href="https://github.com/Nekmo/micropython-workshop/blob/master/demos/demo0/TROUBLESHOOTING.rst">TROUBLESHOOTING.rst</a> en este mismo directorio.</p>
+</section>
+</section>
+<section >
+<section  id="video">
+<h2>Vídeo</h2>
+<p><a class="reference external" href="https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo0.mp4">https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo0.mp4</a></p>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="../../_static/revealjs/dist/reveal.js"></script>
+    
+    
+      <script src="../../_static/revealjs/plugin/notes/notes.js"></script>
+      <script src="../../_static/revealjs/plugin/highlight/highlight.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"controls": true, "progress": true, "history": true, "center": true, "margin": 0.2, "transition": "slide", "scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealNotes,RevealHighlight,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>

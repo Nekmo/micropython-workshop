@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Resolución de problemas</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="../../_static/revealjs/dist/theme/.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=6d7ffba9" />
+    <script src="../../_static/main.js?v=99295717"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section  id="resolucion-de-problemas">
+<h1>Resolución de problemas</h1>
+<p>En caso de que no puedas conectar con el microcontrolador o no funcione correctamente, puedes probar las siguientes
+soluciones:</p>
+</section>
+</section>
+<section >
+<section  id="gnu-linux">
+<h2>GNU/Linux</h2>
+<p>En el caso de sistemas GNU/Linux, es probable que necesites permisos sobre el puerto serie. Una solución es utilizar
+una regla de udev, el cual establece permisos automáticamente al conectar el dispositivo. Crea o edita el fichero:
+<code class="docutils literal notranslate"><span class="pre">/etc/udev/rules.d/50-myusb.rules</span></code> como superusuario y añade la siguiente línea:</p>
+<pre data-id="gnu-linux"><code data-trim data-noescape class="default"># /etc/udev/rules.d/50-myusb.rules
+
+KERNEL==&quot;ttyACM[0-9]*&quot;,MODE=&quot;0666&quot;</code></pre>
+<p>Después, recarga las reglas de udev con el comando:</p>
+<pre data-id="gnu-linux"><code data-trim data-noescape class="bash">sudo udevadm control --reload-rules
+sudo udevadm trigger</code></pre>
+<p>Y desconecta y vuelve a conectar el microcontrolador. Ten en cuenta que la regla de udev da permisos a todos los
+usuarios, lo cual puede no ser deseable según el entorno.</p>
+<p>También puedes añadir tu usuario al grupo <code class="docutils literal notranslate"><span class="pre">dialout</span></code> (o <code class="docutils literal notranslate"><span class="pre">uucp</span></code> en algunas distribuciones) con el comando:</p>
+<pre data-id="gnu-linux"><code data-trim data-noescape class="bash">sudo usermod -a -G dialout $USER
+sudo usermod -a -G uucp $USER</code></pre>
+<p>Después recarga los grupos con el siguiente comando (ten en cuenta que las aplicaciones abiertas no se verán afectadas):</p>
+<pre data-id="gnu-linux"><code data-trim data-noescape class="bash">newgrp</code></pre>
+<p>En caso de no funcionar el anterior comando, cierra la sesión y vuelve a iniciarla.</p>
+<p>En el último caso, puedes cambiar los permisos del puerto serie, pero ten en cuenta que estos cambios se perderán al
+desconectar el dispositivo:</p>
+<pre data-id="gnu-linux"><code data-trim data-noescape class="bash">sudo chmod 666 /dev/ttyACM*</code></pre>
+</section>
+</section>
+<section >
+<section  id="windows">
+<h2>Windows</h2>
+<p>En Windows, es posible que necesites instalar los drivers para el microcontrolador, aunque normalmente no es necesario
+instalar drivers adicionales.</p>
+<p>CP210x: <a class="reference external" href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads">https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads</a>
+CH340: <a class="reference external" href="https://sparks.gogo.co.nz/ch340.html">https://sparks.gogo.co.nz/ch340.html</a></p>
+</section>
+</section>
+<section >
+<section  id="mac-os">
+<h2>Mac OS</h2>
+<p>Tampoco es habitual necesitar drivers adicionales en Mac OS, pero si fuese necesario, puedes encontrarlos en:</p>
+<p>CP210x: <a class="reference external" href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers">https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers</a>
+CH340: <a class="reference external" href="https://sparks.gogo.co.nz/ch340.html">https://sparks.gogo.co.nz/ch340.html</a></p>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="../../_static/revealjs/dist/reveal.js"></script>
+    
+    
+      <script src="../../_static/revealjs/plugin/notes/notes.js"></script>
+      <script src="../../_static/revealjs/plugin/highlight/highlight.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"controls": true, "progress": true, "history": true, "center": true, "margin": 0.2, "transition": "slide", "scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealNotes,RevealHighlight,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>
