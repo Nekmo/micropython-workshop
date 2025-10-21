@@ -48,8 +48,8 @@ https://github.com/Nekmo/micropython-workshop/raw/refs/heads/master/_static/demo
 Simulación
 ==========
 
-Ejercicio: https://wokwi.com/projects/441391974099865601
-Resuelto: https://wokwi.com/projects/431056405050983425
+* Ejercicio: https://wokwi.com/projects/441391974099865601
+* Resuelto: https://wokwi.com/projects/440574036913642497
 
 El componente WS2812B de Wokwi corresponde a los LEDs APA106 usados durante el taller, pero al no tener el mismo
 formato, no se ha podido incluir en el esquema de la simulación. Puedes ver una imagen del montaje en esta misma
