@@ -1104,11 +1104,6 @@ Demo **coche**
 .. revealjs-section::
    :data-background-color: #DDDDDD
 
-.. raw:: html
-
-    <iframe src="http://192.168.4.1/" height="600px" width="100%" style="border: 0;"></iframe>
-
-
 .. revealjs-notes::
 
    ¡Ahora, vamos a ver el coche en acción!
